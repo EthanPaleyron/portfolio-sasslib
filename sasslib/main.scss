@@ -1,0 +1,83 @@
+// @IMPORT YOUR FONT-FAMILY HERE ↴
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
+
+// 🔵font-family
+$font-family: (
+    "jakarta": 'Plus Jakarta Sans',
+
+    // font-family general
+    "serif": serif,
+    "sans-serif": sans-serif,
+    "cursive": cursive,
+    "system-ui": system-ui,
+    "monospace": monospace,
+    "fantasy": fantasy,
+);
+
+// 🔵colors
+$colors: (
+    // colors of the site
+    "primary": #326dee,
+    "secondary": #1ac888,
+    "error": #d32752,
+    "info": #f6c31c,
+    "sass": #BF4080,
+
+    // rainbow color
+    "red": red,
+    "orange": orange,
+    "yellow": yellow,
+    "lawngreen": lawngreen,
+    "blue": blue,
+    "purple": blueviolet,
+
+    // black and white
+    "black": black,
+    "gray": gray,
+    "white": white,
+);
+
+// dark-mode
+$dark-mode: #000;
+$light-mode: #FFF;
+
+// 🔵background-image
+$background-image: (
+    "burger-menu": url(../img/main/burger-menu.svg),
+    "xmark": url(../img/main/xmark.svg),
+    "dark": url(../img/main/circle-dark.svg),
+    "light": url(../img/main/circle-light.svg),
+);
+
+// 🔵:before and :after
+$before: (
+    "strings": '"',
+);
+$after: (
+    "strings": '"',
+);
+
+// 🔵box-shadow
+$base-shadow: (
+    "primary": 1px 3px 5px rgba(0, 0, 0, 0.1),
+);
+
+// 🔵linear-gradient
+$linear-gradient: (
+    "primary": linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%),
+);
+
+// 🔵filter
+$filter: (
+    "black": invert(0%) sepia(92%) saturate(7467%) hue-rotate(113deg) brightness(91%) contrast(99%),
+    "white": invert(100%) sepia(0%) saturate(7500%) hue-rotate(20deg) brightness(98%) contrast(107%),
+);
+
+// 🔵ul-image
+$list_image: (
+    "name": url(),
+);
+
+a {
+    color: #d32752;
+}

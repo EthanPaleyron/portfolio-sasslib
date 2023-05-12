@@ -1,0 +1,339 @@
+// 🔵SIZING AND SPACE
+
+@for $i from 100 through 0 {
+
+    // width
+    .w-#{$i} {
+        width: $base-width * $i;
+    }
+
+    // heidth
+    .h-#{$i} {
+        height: $base-hedth * $i;
+    }
+
+    // margin
+    .m-#{$i} {
+        margin: $base-margin * $i;
+    }
+
+    .mtb-#{$i} {
+        margin: $base-margin * $i 0 $base-margin * $i 0;
+    }
+
+    .mrl-#{$i} {
+        margin: 0 $base-margin * $i 0 $base-margin * $i;
+    }
+
+    .mt-#{$i} {
+        margin-top: $base-margin * $i;
+    }
+
+    .mr-#{$i} {
+        margin-right: $base-margin * $i;
+    }
+
+    .mb-#{$i} {
+        margin-bottom: $base-margin * $i;
+    }
+
+    .ml-#{$i} {
+        margin-left: $base-margin * $i;
+    }
+
+    // top right bottom left
+    .t-#{$i} {
+        top: $top-right-bottom-left * $i;
+    }
+
+    .r-#{$i} {
+        right: $top-right-bottom-left * $i;
+    }
+
+    .b-#{$i} {
+        bottom: $top-right-bottom-left * $i;
+    }
+
+    .l-#{$i} {
+        left: $top-right-bottom-left * $i;
+    }
+}
+
+@for $i from 0 through 50 {
+
+    // font-size
+    .size-#{$i} {
+        font-size: $base-font-size * $i;
+    }
+
+    // line-height
+    .line-h-#{$i} {
+        line-height: $base-line-height * $i;
+    }
+
+    // padding
+    .p-#{$i} {
+        padding: $base-padding * $i;
+    }
+
+    .ptb-#{$i} {
+        padding: $base-padding * $i 0 $base-padding * $i 0;
+    }
+
+    .prl-#{$i} {
+        padding: 0 $base-padding * $i 0 $base-padding * $i;
+    }
+
+    .pt-#{$i} {
+        padding-top: $base-padding * $i;
+    }
+
+    .pr-#{$i} {
+        padding-right: $base-padding * $i;
+    }
+
+    .pb-#{$i} {
+        padding-bottom: $base-padding * $i;
+    }
+
+    .pl-#{$i} {
+        padding-left: $base-padding * $i;
+    }
+
+    // gap
+    .gap-#{$i} {
+        gap: $base-gap * $i;
+    }
+
+    // border
+    .bt-#{$i} {
+        border: $base-border-thickness * $i;
+    }
+
+    .btt-#{$i} {
+        -webkit-text-stroke-width: $base-border-thickness * $i;
+    }
+
+    .br-#{$i} {
+        border-radius: $base-border-radius * $i;
+    }
+
+    .brc-#{$i} {
+        border-radius: $base-border-radius-circle * $i;
+    }
+
+    .tdt-#{$i} {
+        text-decoration-thickness: $base-text-decoration * $i;
+    }
+
+    // z-index
+    .z-#{$i} {
+        z-index: $base-z-index * $i;
+    }
+}
+
+// opacity
+@for $i from 0 through 10 {
+    .o-#{$i} {
+        opacity: $base-opacity * $i;
+    }
+}
+
+
+// 🔵MAIN
+
+// font-family
+@each $key,
+$val in $font-family {
+    .font-family-#{$key} {
+        font-family: $val;
+    }
+}
+
+// font-style
+@each $key in $font-style {
+    .font-s-#{$key} {
+        font-style: $key;
+    }
+}
+
+// font-weight
+@each $key in $font-weight {
+    .font-w-#{$key} {
+        font-weight: $key;
+    }
+}
+
+// text-transform
+@each $key in $text-transform {
+    .text-t-#{$key} {
+        text-transform: $key;
+    }
+}
+
+// text-decoration
+@each $key in $text-decoration {
+    .text-d-#{$key} {
+        text-decoration-line: $key;
+    }
+}
+
+// list-style
+@each $key in $list-style {
+    .list-s-#{$key} {
+        list-style: $key;
+    }
+}
+
+// background
+@each $key in $background {
+    .background-#{$key} {
+        background: $key;
+    }
+}
+
+// overflow
+@each $key in $overflow {
+    .overflow-#{$key} {
+        overflow: $key;
+    }
+}
+
+// border-style
+@each $key in $border-style {
+    .border-#{$key} {
+        border-style: $key;
+    }
+}
+
+// cursor
+@each $key in $cursor {
+    .cursor-#{$key} {
+        cursor: $key;
+    }
+}
+
+// user-select
+@each $key in $user-select {
+    .user-s-#{$key} {
+        user-select: $key;
+        -ms-user-select: $key;
+        -moz-user-select: $key;
+        -webkit-user-select: $key;
+        -webkit-user-drag: $key;
+        -webkit-touch-callout: $key;
+    }
+}
+
+
+// 🔵POSITIONING
+
+// text-position
+@each $key in $text-align {
+    .text-#{$key} {
+        text-align: $key;
+    }
+}
+
+// display
+@each $key in $display {
+    .d-#{$key} {
+        display: $key;
+    }
+}
+
+// justify-content
+@each $key in $justify-content {
+    .justify-#{$key} {
+        display: flex;
+        justify-content: $key;
+    }
+}
+
+// align-items
+@each $key in $align-items {
+    .items-#{$key} {
+        display: flex;
+        align-items: $key;
+    }
+}
+
+// position
+@each $key in $position {
+    .position-#{$key} {
+        position: $key;
+    }
+}
+
+// float
+@each $key in $float {
+    .float-#{$key} {
+        float: $key;
+    }
+}
+
+
+// 🔵OTHER
+
+// :before and :after
+@each $key,
+$val in $before {
+    .before-#{$key}:before {
+        content: $val;
+    }
+}
+
+@each $key,
+$val in $after {
+    .after-#{$key}:after {
+        content: $val;
+    }
+}
+
+// background-image
+@each $key,
+$val in $background-image {
+    .image-#{$key} {
+        background-image: $val;
+    }
+}
+
+// filter
+@each $key,
+$val in $filter {
+    .filter-#{$key} {
+        filter: $val;
+    }
+}
+
+// box-shadow
+@each $key,
+$val in $base-shadow {
+    .bs-#{$key} {
+        box-shadow: $val;
+    }
+}
+
+// text-shadow
+@each $key,
+$val in $base-shadow {
+    .ts-#{$key} {
+        text-shadow: $val;
+    }
+}
+
+// linear-gradient
+@each $key,
+$val in $linear-gradient {
+    .lg-#{$key} {
+        text-shadow: $val;
+    }
+}
+
+// list-style-image
+@each $key,
+$val in $list_image {
+    .ul-#{$key} {
+        list-style-image: $val;
+    }
+}

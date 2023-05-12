@@ -1,0 +1,48 @@
+%translation {
+    transition: all ease-out 0.2s;
+}
+
+body[data-theme="light"] {
+    color: $dark-mode;
+    background-color: $light-mode;
+    @extend %translation;
+}
+
+body[data-theme="dark"] {
+    color: $light-mode;
+    background-color: $dark-mode;
+    @extend %translation;
+}
+
+body[data-theme="light"] .grayscale {
+    filter: grayscale(0%);
+    @extend %translation;
+}
+
+body[data-theme="dark"] .grayscale {
+    filter: grayscale(35%);
+    @extend %translation;
+}
+
+
+// 🔵dark mode auto (paramertes from pc)
+
+// @media (prefers-color-scheme: dark) {
+//     body {
+//         color: $light-mode;
+//         background-color: $dark-mode;
+//     }
+//     body .grayscale {
+//         filter: grayscale(35%);
+//     }
+// }
+
+// @media (prefers-color-scheme: light) {
+//     body {
+//         color: $dark-mode;
+//         background-color: $light-mode;
+//     }
+//     body .grayscale {
+//         filter: grayscale(0%);
+//     }
+// }

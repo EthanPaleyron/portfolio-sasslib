@@ -1,0 +1,75 @@
+%flex-layout-nav {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar {
+    @extend %flex-layout-nav;
+    position: relative;
+    padding: $base-padding $base-padding * 2;
+
+    .site-title {
+        font-size: $font-size-xxl;
+    }
+
+    .container {
+        @extend %flex-layout-nav;
+    }
+
+    // Burger-menu
+    .slider-menu {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu-b {
+        display: none;
+        user-select: none;
+    }
+
+    .menu-check {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider-menu {
+        position: absolute;
+        display: none !important;
+        width: 100%;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        padding: 2rem 1rem;
+        justify-content: center;
+        top: 100%;
+        left: 0px;
+        z-index: 99;
+    }
+
+    .menu-check:checked ~ .slider-menu {
+        display: flex !important;
+    }
+
+    .menu-b {
+        display: block !important;
+    }
+}
+
+@each $key,
+$val in $colors {
+    .navbar-#{$key} {
+        @extend .navbar;
+        background-color: $val;
+    }
+}
+
+@each $key,
+$val in $colors {
+    .slider-menu-#{$key} {
+        @extend .slider-menu;
+        background-color: $val;
+    }
+}

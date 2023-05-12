@@ -1,0 +1,173 @@
+@each $key,
+$val in $colors {
+
+    // text-color
+    .text-#{$key} {
+        color: $val;
+    }
+
+    .text-hover-#{$key} {
+        &:hover {
+            color: $val;
+        }
+    }
+
+    .text-active-#{$key} {
+        &:active {
+            color: $val;
+        }
+    }
+
+    .text-visited-#{$key} {
+        &:visited {
+            color: $val;
+        }
+    }
+
+    // background-color
+    .bg-#{$key} {
+        background-color: $val;
+    }
+
+    .bg-hover-#{$key} {
+        &:hover {
+            background-color: $val;
+        }
+    }
+
+    .bg-active-#{$key} {
+        &:active {
+            background-color: $val;
+        }
+    }
+
+    .bg-visited-#{$key} {
+        &:visited {
+            background-color: $val;
+        }
+    }
+
+    // border-color
+    .bc-#{$key} {
+        border-color: $val;
+    }
+
+    .bc-hover-#{$key} {
+        &:hover {
+            border-color: $val;
+        }
+    }
+
+    .bc-active-#{$key} {
+        &:active {
+            border-color: $val;
+        }
+    }
+
+    .bc-visited-#{$key} {
+        &:visited {
+            border-color: $val;
+        }
+    }
+
+    // text-decoration-color
+    .tdc-#{$key} {
+        text-decoration-color: $val;
+    }
+
+    .tdc-hover-#{$key} {
+        &:hover {
+            text-decoration-color: $val;
+        }
+    }
+
+    .tdc-active-#{$key} {
+        &:active {
+            text-decoration-color: $val;
+        }
+    }
+
+    .tdc-visited-#{$key} {
+        &:visited {
+            text-decoration-color: $val;
+        }
+    }
+
+    // border-text-color
+    .btc-#{$key} {
+        -webkit-text-stroke-color: $val;
+    }
+
+    .btc-hover-#{$key} {
+        &:hover {
+            -webkit-text-stroke-color: $val;
+        }
+    }
+
+    .btc-active-#{$key} {
+        &:active {
+            -webkit-text-stroke-color: $val;
+        }
+    }
+
+    .btc-visited-#{$key} {
+        &:visited {
+            -webkit-text-stroke-color: $val;
+        }
+    }
+
+    // :before and :after
+    .text-before-#{$key}:before {
+        color: $val;
+    }
+
+    .text-after-#{$key}:after {
+        color: $val;
+    }
+
+    .bg-before-#{$key}:before {
+        background-color: $val;
+    }
+
+    .bg-after-#{$key}:after {
+        background-color: $val;
+    }
+
+
+    @if ($val !=black and $val !=white) {
+
+        //light variation
+        @for $i from 1 through 9 {
+            .text-#{$key}-light-#{$i} {
+                color: mix(white, $val, $i * 10%);
+            }
+
+            .text-hover-#{$key}-light-#{$i} {
+                &:hover {
+                    color: mix(white, $val, $i * 10%);
+                }
+            }
+
+            .bg-#{$key}-light-#{$i} {
+                background-color: mix(white, $val, $i * 10%);
+            }
+        }
+
+        //dark variation
+        @for $i from 1 through 9 {
+            .text-#{$key}-dark-#{$i} {
+                color: mix(black, $val, $i * 10%);
+            }
+
+            .text-hover-#{$key}-dark-#{$i} {
+                &:hover {
+                    color: mix(black, $val, $i * 10%);
+                }
+            }
+
+            .bg-#{$key}-dark-#{$i} {
+                background-color: mix(black, $val, $i * 10%);
+            }
+        }
+    }
+}
